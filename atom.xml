@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Hexo]]></title>
-  
+  <title><![CDATA[Guirong]]></title>
+  <subtitle><![CDATA[guirong's personal site]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-10-11T19:07:54.323Z</updated>
+  <updated>2014-10-11T19:22:20.602Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
-    <name><![CDATA[John Doe]]></name>
-    
+    <name><![CDATA[guirong cao]]></name>
+    <email><![CDATA[guirong.cao@gmail.com]]></email>
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
