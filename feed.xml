@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Guirong]]></title>
   <subtitle><![CDATA[guirong's personal site]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/feed.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-10-11T19:22:20.602Z</updated>
+  <updated>2014-10-11T19:25:28.639Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
