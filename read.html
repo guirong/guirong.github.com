@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>@Guirong</title>
+    <title>Guirong</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <meta name="mobile-web-app-capable" content="yes">
@@ -22,6 +22,7 @@
     
     <link rel="alternative" href="/feed.xml" title="Guirong" type="application/atom+xml">
     
+    <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/style.css" type="text/css">
 <link rel="stylesheet" href="/highlight.css" type="text/css">
 
@@ -32,7 +33,7 @@
 <body>
 <div id="main">
     <header>
-        <h1>@Guirong</h1>
+        <h1>Guirong</h1>
         <div class="line r"></div>
         <div class="line g"></div>
         <div class="line b"></div>
@@ -46,9 +47,40 @@
     </nav>
 <div id="content">
     <h2>reading</h2>
-    <script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=dolist&amp;n=20&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>
     <h2>read</h2>
-    <script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=collection&amp;n=50&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>
+    <ul>
+        <li v-repeat="reads">
+            <h3>{{$key}}</h3>
+            <ul>
+                 <li v-repeat="{{$value}}"><a href="#"><img src=""/></a></li>
+            </ul>
+        </li>
+    </ul>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
+    <script>
+         function books(data){
+             var ret = {reading:[],reads : {}},year;
+             data.collections.forEach(function(d){
+                 if(d.status=="read"){
+                     year = d.updated.split("-")[0];
+                     ret.reads[year]= ret.reads[year] || [];
+                     ret.reads[year].push(d);
+                 }else if(d.status=="reading"){
+                     ret.reading.push(d);
+                 }
+             });
+
+             new Vue({
+                 el: '#content',
+                 data: ret
+             })
+         }
+    </script>
+    <script src="https://api.douban.com/v2/book/user/rong179/collections?callback=books"></script>
+    <!--<h2>reading</h2>-->
+    <!--<script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=dolist&amp;n=20&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>-->
+    <!--<h2>read</h2>-->
+    <!--<script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=collection&amp;n=50&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>-->
 </div>
 <footer>
     © 2014 Guirong Cao.
