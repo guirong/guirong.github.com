@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guirong</title>
+    <title> Guirong </title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <meta name="mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
 <body>
 <div id="main">
     <header>
-        <h1>Guirong</h1>
+        <h1><span class="rotate">@</span>Guirong</h1>
         <div class="line r"></div>
         <div class="line g"></div>
         <div class="line b"></div>
@@ -47,6 +47,9 @@
     </nav>
 <div id="content">
     <style>
+        #read p{
+            margin:0;
+        }
         .booklist:after{
             clear: both;
             content: '';
@@ -75,9 +78,37 @@
             display: block;
             font-size: 0.8rem;
             width: 105px;
-            padding: 0.5em;
+            padding: 0.3rem;
             box-sizing:border-box;
             line-height: 1.4em;
+        }
+
+        #read .comment .updated{
+            display: none;
+            font-size: 0.5rem;
+            text-align: right;
+            bottom: 0.2rem;
+            right: 0.3rem;
+            position: absolute;
+
+        }
+        #read .comment .rating{
+            display: none;
+            padding-bottom:3px;
+        }
+        #read .cover.hover .comment,
+        #read .cover:hover .comment{
+            top:0;
+            height: 100%;
+            white-space: normal;
+            overflow: hidden;
+            padding-bottom: 1rem;
+        }
+        #read .cover:hover .rating,
+        #read .cover.hover .rating,
+        #read .cover:hover .updated,
+        #read .cover.hover .updated{
+            display: block;
         }
         #read .cover img{
             max-width: 105px;
@@ -99,6 +130,7 @@
     </style>
     <div id="read">
         <h2>reading</h2>
+        <div class="loading">loading...</div>
         <gr-booklist v-with="list:reading"></gr-booklist>
         <h2>read</h2>
         <ul>
@@ -113,7 +145,11 @@
                 <li v-repeat="item:list">
                     <a target="_blank" href="{{item.book.alt}}" class="cover">
                         <img v-attr="src:item.book.images.large"/>
-                        <div v-if="item.comment" class="comment ellipsis">{{item.comment}}</div>
+                        <div v-if="item.comment" class="comment ellipsis">
+                        <p v-if="item.rating" class="rating">{{item.rating.value*2}}分</p>
+                        {{item.comment}}
+                        <p class="updated">{{item.updated|gr-shortdate}}</p>
+                        </div>
                     </a>
                     <div class="info">
                         <div class="title ellipsis">
@@ -133,10 +169,15 @@
             Vue.component('gr-booklist', {
                 template: document.getElementById("J_template_booklist").innerHTML
             });
+            Vue.filter('gr-shortdate', function (value) {
+                var r = value.match(/\d{4}-(\d{2})-(\d{2})\s+?(\d{2}):(\d{2}):\d{2}/);
+                return r[1]+"."+r[2]+" "+r[3]+":"+r[4];
+            });
 
             var program = {
                 init:function(){
                     var self = this;
+                    document.body.className = "loading";
                     S.use("io",function(S,IO){
                         IO.jsonp("https://api.douban.com/v2/book/user/rong179/collections?count=1000",function(data){
                             self.render(self.processData(data));
@@ -150,6 +191,8 @@
                         el: "#content",
                         data: data
                     });
+
+                    document.body.className = "";
                 },
                 processData:function(data){
                     var ret = {reading:[],reads : []},reads={},year;
