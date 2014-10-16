@@ -99,47 +99,41 @@
     </style>
     <div id="read">
         <h2>reading</h2>
-        <ul class="booklist">
-            <li v-repeat="item:reading">
-                <a target="_blank" href="{{item.book.alt}}" class="cover">
-                    <img v-attr="src:item.book.images.large"/>
-                </a>
-                <div class="info">
-                    <div class="title ellipsis">
-                        <a title="{{item.book.title}}" href="{{item.book.alt}}">{{item.book.title}}</a>
-                    </div>
-                    <div class="author ellipsis">
-                        {{item.book.author[0]}}
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <gr-booklist v-with="list:reading"></gr-booklist>
         <h2>read</h2>
         <ul>
             <li v-repeat="read:reads">
-                <h3>{{read.key}}</h3>
-                <ul  class="booklist">
-                     <li v-repeat="item:read.data">
-                         <a target="_blank" href="{{item.book.alt}}" class="cover">
-                             <img v-attr="src:item.book.images.large"/>
-                             <span v-if="item.comment" class="comment ellipsis">{{item.comment}}</span>
-                         </a>
-                         <div class="info">
-                             <div class="title ellipsis">
-                                 <a title="{{item.book.title}}" href="{{item.book.alt}}">{{item.book.title}}</a>
-                             </div>
-                             <div class="author ellipsis">
-                                 {{item.book.author[0]}}
-                             </div>
-                         </div>
-                     </li>
-                </ul>
+                <h3 v-text="read.key"></h3>
+                <gr-booklist v-with="list:read.data"></gr-booklist>
             </li>
         </ul>
     </div>
+    <script id="J_template_booklist" type="text/tpl">
+        <ul class="booklist">
+                <li v-repeat="item:list">
+                    <a target="_blank" href="{{item.book.alt}}" class="cover">
+                        <img v-attr="src:item.book.images.large"/>
+                        <div v-if="item.comment" class="comment ellipsis">{{item.comment}}</div>
+                    </a>
+                    <div class="info">
+                        <div class="title ellipsis">
+                            <a title="{{item.book.title}}" href="{{item.book.alt}}">{{item.book.title}}</a>
+                        </div>
+                        <div class="author ellipsis">
+                            {{item.book.author[0]}}
+                        </div>
+                    </div>
+                </li>
+        </ul>
+    </script>
     <script src="http://g.tbcdn.cn/??kissy/k/1.4.9/seed.js,mtb/lib-3rd/vue/vue.min.js"></script>
     <script>
         (function(S){
+
+            Vue.component('gr-booklist', {
+                template: document.getElementById("J_template_booklist").innerHTML
+            });
+
             var program = {
                 init:function(){
                     var self = this;
@@ -148,8 +142,6 @@
                             self.render(self.processData(data));
                         });
                     });
-
-
                 },
                 render:function(data){
                     console.log(data);
@@ -189,10 +181,6 @@
 
         })(KISSY);
     </script>
-    <!--<h2>reading</h2>-->
-    <!--<script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=dolist&amp;n=20&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>-->
-    <!--<h2>read</h2>-->
-    <!--<script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=collection&amp;n=50&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>-->
 </div>
 <footer>
     © 2014 Guirong Cao.
