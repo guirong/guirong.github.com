@@ -116,10 +116,10 @@
         </ul>
         <h2>read</h2>
         <ul>
-            <li v-repeat="reads">
-                <h3>{{$key}}</h3>
+            <li v-repeat="read:reads">
+                <h3>{{read.key}}</h3>
                 <ul  class="booklist">
-                     <li v-repeat="item:$value">
+                     <li v-repeat="item:read.data">
                          <a target="_blank" href="{{item.book.alt}}" class="cover">
                              <img v-attr="src:item.book.images.large"/>
                              <span v-if="item.comment" class="comment ellipsis">{{item.comment}}</span>
@@ -160,16 +160,27 @@
                     });
                 },
                 processData:function(data){
-                    var ret = {reading:[],reads : {}},year;
+                    var ret = {reading:[],reads : []},reads={},year;
                     data.collections.forEach(function(d){
                         if(d.status=="read"){
                             year = d.updated.split("-")[0];
-                            ret.reads[year]= ret.reads[year] || [];
-                            ret.reads[year].push(d);
+                            reads[year]= reads[year] || [];
+                            reads[year].push(d);
                         }else if(d.status=="reading"){
                             ret.reading.push(d);
                         }
                     });
+
+                    for(var i in reads){
+                        ret.reads.push({
+                            key:i,
+                            data:reads[i]
+                        });
+                    }
+                    ret.reads.sort(function(a,b){
+                        return b.key - a.key;
+                    });
+
                     return ret;
                 }
             };
