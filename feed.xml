@@ -4,7 +4,7 @@
   <subtitle><![CDATA[guirong's personal site]]></subtitle>
   <link href="/feed.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-10-16T07:49:04.186Z</updated>
+  <updated>2014-10-16T07:50:43.578Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
@@ -18,9 +18,9 @@
     <title><![CDATA[跨终端实践-天猫试戴的解决方案]]></title>
     <link href="http://guirong.github.io/2014/10/crossend-tmalltry.html"/>
     <id>http://guirong.github.io/2014/10/crossend-tmalltry.html</id>
-    <published>2014-10-16T07:47:44.000Z</published>
-    <updated>2014-10-16T07:47:44.000Z</updated>
-    <content type="html"><![CDATA[<p>请先扫码体验(天猫app体验最佳)：<img src="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png" width="20"></p>
+    <published>2014-10-16T07:50:34.000Z</published>
+    <updated>2014-10-16T07:50:34.000Z</updated>
+    <content type="html"><![CDATA[<p>请先扫码体验(天猫app体验最佳)：<a target="_blank" href="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png"><img src="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png" style="width:20px;"></a></p>
 <p><img src="http://gtms03.alicdn.com/tps/i3/TB1gyk_FFXXXXaiapXXa6gN9XXX-660-990.jpg" style="max-width:660px;width:100%"></p>
 <p>体验完产品，具体讲下技术实现方案，整体的实现过程可以分为：</p>
 <p><code>拍照-&gt;获得图片数据-&gt;将商品与图片合成-&gt;生成效果图-&gt;用户保存图片</code></p>
@@ -109,8 +109,7 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>请先扫码体验(天猫app体验最佳)：<img src="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png" width="20"></p>
-<p><img src="http://]]>
+    <![CDATA[<p>请先扫码体验(天猫app体验最佳)：<a target="_blank" href="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png"><img src="http://gtms]]>
     </summary>
     
       <category term="crossend" scheme="http://guirong.github.io/tags/crossend/"/>
