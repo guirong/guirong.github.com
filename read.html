@@ -46,37 +46,138 @@
         <a href="/feed.xml">Feed</a>
     </nav>
 <div id="content">
-    <h2>reading</h2>
-    <h2>read</h2>
-    <ul>
-        <li v-repeat="reads">
-            <h3>{{$key}}</h3>
-            <ul>
-                 <li v-repeat="{{$value}}"><a href="#"><img src=""/></a></li>
-            </ul>
-        </li>
-    </ul>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
+    <style>
+        .booklist:after{
+            clear: both;
+            content: '';
+            display: block;
+        }
+        #read .booklist{
+            margin-right: -1em;
+        }
+        #read .booklist li{
+            margin:0 0.51em 1em 0;
+            width: 105px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #read .booklist a.cover{
+            display: block;
+            height: 150px;
+            position: relative;
+        }
+        #read .comment{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            display: block;
+            font-size: 0.8rem;
+            width: 105px;
+            padding: 0.5em;
+            box-sizing:padding-box;
+            line-height: 1.4em;
+        }
+        #read .cover img{
+            max-width: 105px;
+            max-height: 150px;
+        }
+        #read .booklist .title a{
+            font-size: 14px;
+            text-decoration: none;
+        }
+        #read .booklist .author{
+            line-height: 1.4em;
+            font-size: 12px;
+        }
+        @media only screen and (min-width: 1024px){
+            #read .booklist li{
+                margin-right: 1em;
+            }
+        }
+    </style>
+    <div id="read">
+        <h2>reading</h2>
+        <ul class="booklist">
+            <li v-repeat="item:reading">
+                <a target="_blank" href="{{item.book.alt}}" class="cover">
+                    <img v-attr="src:item.book.images.large"/>
+                </a>
+                <div class="info">
+                    <div class="title ellipsis">
+                        <a title="{{item.book.title}}" href="{{item.book.alt}}">{{item.book.title}}</a>
+                    </div>
+                    <div class="author ellipsis">
+                        {{item.book.author[0]}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <h2>read</h2>
+        <ul>
+            <li v-repeat="reads">
+                <h3>{{$key}}</h3>
+                <ul  class="booklist">
+                     <li v-repeat="item:$value">
+                         <a target="_blank" href="{{item.book.alt}}" class="cover">
+                             <img v-attr="src:item.book.images.large"/>
+                             <span v-if="item.comment" class="comment ellipsis">{{item.comment}}</span>
+                         </a>
+                         <div class="info">
+                             <div class="title ellipsis">
+                                 <a title="{{item.book.title}}" href="{{item.book.alt}}">{{item.book.title}}</a>
+                             </div>
+                             <div class="author ellipsis">
+                                 {{item.book.author[0]}}
+                             </div>
+                         </div>
+                     </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="http://g.tbcdn.cn/??kissy/k/1.4.9/seed.js,mtb/lib-3rd/vue/vue.min.js"></script>
     <script>
-         function books(data){
-             var ret = {reading:[],reads : {}},year;
-             data.collections.forEach(function(d){
-                 if(d.status=="read"){
-                     year = d.updated.split("-")[0];
-                     ret.reads[year]= ret.reads[year] || [];
-                     ret.reads[year].push(d);
-                 }else if(d.status=="reading"){
-                     ret.reading.push(d);
-                 }
-             });
+        (function(S){
+            var program = {
+                init:function(){
+                    var self = this;
+                    S.use("io",function(S,IO){
+                        IO.jsonp("https://api.douban.com/v2/book/user/rong179/collections?count=1000",function(data){
+                            self.render(self.processData(data));
+                        });
+                    });
 
-             new Vue({
-                 el: '#content',
-                 data: ret
-             })
-         }
+
+                },
+                render:function(data){
+                    console.log(data);
+
+                    new Vue({
+                        el: "#content",
+                        data: data
+                    });
+                },
+                processData:function(data){
+                    var ret = {reading:[],reads : {}},year;
+                    data.collections.forEach(function(d){
+                        if(d.status=="read"){
+                            year = d.updated.split("-")[0];
+                            ret.reads[year]= ret.reads[year] || [];
+                            ret.reads[year].push(d);
+                        }else if(d.status=="reading"){
+                            ret.reading.push(d);
+                        }
+                    });
+                    return ret;
+                }
+            };
+
+            program.init();
+
+        })(KISSY);
     </script>
-    <script src="https://api.douban.com/v2/book/user/rong179/collections?callback=books"></script>
     <!--<h2>reading</h2>-->
     <!--<script type="text/javascript" src="http://www.douban.com/service/badge/rong179/?selection=latest&amp;picsize=medium&amp;hideself=on&amp;show=dolist&amp;n=20&amp;hidelogo=on&amp;cat=book&amp;columns=4"></script>-->
     <!--<h2>read</h2>-->

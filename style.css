@@ -50,6 +50,12 @@ h4 {
   font-size: 1em;
   color: #333;
 }
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
 header {
   border-bottom: 2px solid #ccc;
   position: relative;
@@ -97,7 +103,7 @@ nav a:hover {
   line-height: 1.6em;
   min-height: 50vh;
 }
-#content li {
+#content.posts li {
   padding: 0.2em 0;
 }
 #content time {
