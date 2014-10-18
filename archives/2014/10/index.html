@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Guirong </title>
+    
+    <title>Archives: 2014/10 - Guirong</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <meta name="mobile-web-app-capable" content="yes">
@@ -9,6 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon180.png"/>
     <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guirong">
@@ -48,16 +50,46 @@
 <div id="content" class="posts">
     <ul>
         
+        <li><time datetime="2014-10-18T09:42:03.000Z" itemprop="datePublished">2014-10-18</time> <a title="About Touch Icons"  href="/2014/10/about-touch-icons.html">About Touch Icons</a></li>
+        
         <li><time datetime="2014-10-16T07:51:58.000Z" itemprop="datePublished">2014-10-16</time> <a title="跨终端实践-天猫试戴的解决方案"  href="/2014/10/crossend-tmalltry.html">跨终端实践-天猫试戴的解决方案</a></li>
         
         <li><time datetime="2014-10-16T07:45:51.000Z" itemprop="datePublished">2014-10-16</time> <a title="Hello World"  href="/2014/10/hello-world.html">Hello World</a></li>
         
     </ul>
 </div>
+
 <footer>
     © 2014 Guirong Cao.
 </footer>
 </div>
+
+<a id="back2top">Top</a>
+
+
+<script>
+    (function(){
+        var b = document.getElementById("back2top"),
+                bt = b.style,
+                t;
+        window.addEventListener("scroll",function(){
+            if(!t){
+                t = setTimeout(function(){
+                    if(window.scrollY > window.innerHeight*2){
+                        bt.visibility = "visible";
+                    }else{
+                        bt.visibility = "hidden";
+                    }
+                    t = clearTimeout(t);
+                },500);
+            }
+        });
+        b.addEventListener("click",function(){
+            window.scrollTo(0,0);
+        });
+    })();
+
+</script>
 
 </body>
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Guirong </title>
+    
+    <title>跨终端实践-天猫试戴的解决方案 - Guirong</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <meta name="mobile-web-app-capable" content="yes">
@@ -9,6 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon180.png"/>
     <meta name="description" content="请先扫码体验(天猫app体验最佳)：
 
 体验完产品，具体讲下技术实现方案，整体的实现过程可以分为：
@@ -172,7 +174,7 @@
     </section>
 
     
-    <section class="comment">
+    <section id="comment">
         <div id="disqus_thread">
             <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
@@ -185,22 +187,50 @@
         
         var disqus_url = 'http://guirong.github.io/2014/10/crossend-tmalltry.html';
         
-        (function(){
+        window.addEventListener('load',function(){
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+        });
     </script>
     
 
 
 </article>
+
 <footer>
     © 2014 Guirong Cao.
 </footer>
 </div>
+
+<a id="back2top">Top</a>
+
+
+<script>
+    (function(){
+        var b = document.getElementById("back2top"),
+                bt = b.style,
+                t;
+        window.addEventListener("scroll",function(){
+            if(!t){
+                t = setTimeout(function(){
+                    if(window.scrollY > window.innerHeight*2){
+                        bt.visibility = "visible";
+                    }else{
+                        bt.visibility = "hidden";
+                    }
+                    t = clearTimeout(t);
+                },500);
+            }
+        });
+        b.addEventListener("click",function(){
+            window.scrollTo(0,0);
+        });
+    })();
+
+</script>
 
 </body>
 </html>
