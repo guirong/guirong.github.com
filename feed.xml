@@ -4,7 +4,7 @@
   <subtitle><![CDATA[guirong's personal site]]></subtitle>
   <link href="/feed.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-10-22T04:50:09.281Z</updated>
+  <updated>2014-10-22T04:57:35.084Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
@@ -15,18 +15,12 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[]]></title>
+    <title><![CDATA[fe references]]></title>
     <link href="http://guirong.github.io/2014/10/fe-references.html"/>
     <id>http://guirong.github.io/2014/10/fe-references.html</id>
-    <published>2014-10-22T04:49:59.000Z</published>
-    <updated>2014-10-22T04:49:59.000Z</updated>
-    <content type="html"><![CDATA[<p>title:fe references<br>tags:</p>
-<ul>
-<li>references</li>
-<li>tools</li>
-</ul>
-<hr>
-<h2 id="兼容性">兼容性</h2>
+    <published>2014-10-22T04:50:38.000Z</published>
+    <updated>2014-10-22T04:50:38.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="兼容性">兼容性</h2>
 <ul>
 <li><a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a></li>
 <li><a href="http://mobilehtml5.org/" target="_blank" rel="external">http://mobilehtml5.org/</a></li>
@@ -49,16 +43,15 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>title:fe references<br>tags:</p>
+    <![CDATA[<h2 id="兼容性">兼容性</h2>
 <ul>
-<li>references</li>
-<li>tools</li>
-</ul>
-<hr>
-<h2 id="兼容性">兼容性</h2>
-<ul>
-<li><a href="http://canius]]>
+<li><a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a></li>
+<li><a href="http://mobilehtml5]]>
     </summary>
+    
+      <category term="references" scheme="http://guirong.github.io/tags/references/"/>
+    
+      <category term="tools" scheme="http://guirong.github.io/tags/tools/"/>
     
   </entry>
   
