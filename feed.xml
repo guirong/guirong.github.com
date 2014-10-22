@@ -4,7 +4,7 @@
   <subtitle><![CDATA[guirong's personal site]]></subtitle>
   <link href="/feed.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-10-18T09:50:52.507Z</updated>
+  <updated>2014-10-22T04:50:09.281Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
@@ -15,21 +15,71 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[About Touch Icons]]></title>
-    <link href="http://guirong.github.io/2014/10/about-touch-icons.html"/>
-    <id>http://guirong.github.io/2014/10/about-touch-icons.html</id>
-    <published>2014-10-18T09:42:03.000Z</published>
-    <updated>2014-10-18T09:42:03.000Z</updated>
-    <content type="html"><![CDATA[<ol>
-<li><a href="https://mathiasbynens.be/notes/touch-icons" target="_blank" rel="external">https://mathiasbynens.be/notes/touch-icons</a></li>
+    <title><![CDATA[]]></title>
+    <link href="http://guirong.github.io/2014/10/fe-references.html"/>
+    <id>http://guirong.github.io/2014/10/fe-references.html</id>
+    <published>2014-10-22T04:49:59.000Z</published>
+    <updated>2014-10-22T04:49:59.000Z</updated>
+    <content type="html"><![CDATA[<p>title:fe references<br>tags:</p>
+<ul>
+<li>references</li>
+<li>tools</li>
+</ul>
+<hr>
+<h2 id="兼容性">兼容性</h2>
+<ul>
+<li><a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a></li>
+<li><a href="http://mobilehtml5.org/" target="_blank" rel="external">http://mobilehtml5.org/</a></li>
+</ul>
+<h2 id="mvc">mvc</h2>
+<ul>
+<li>[backbone]</li>
+<li>auglarjs</li>
+</ul>
+<h2 id="mobile">mobile</h2>
+<ul>
+<li>cordova &amp; phonegap</li>
+<li><a href="http://www.webapps-online.com/online-tools/user-agent-strings/dv/" target="_blank" rel="external">http://www.webapps-online.com/online-tools/user-agent-strings/dv/</a></li>
+<li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
+</ul>
+<h2 id="tools">tools</h2>
+<ul>
+<li><a href="http://www.charlesproxy.com/download/" target="_blank" rel="external">charles</a>  http proxy</li>
+<li><a href="http://wireshark.org/" target="_blank" rel="external">wireshark</a> network packet analyzer</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>title:fe references<br>tags:</p>
+<ul>
+<li>references</li>
+<li>tools</li>
+</ul>
+<hr>
+<h2 id="兼容性">兼容性</h2>
+<ul>
+<li><a href="http://canius]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[viewport detail]]></title>
+    <link href="http://guirong.github.io/2014/10/viewport.html"/>
+    <id>http://guirong.github.io/2014/10/viewport.html</id>
+    <published>2014-10-22T04:07:20.000Z</published>
+    <updated>2014-10-22T04:07:20.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="参考">参考</h2>
+<ol>
+<li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
+<li>viewport 数据（有些老）：<a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" target="_blank" rel="external">http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/</a></li>
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<ol>
-<li><a href="https://mathiasbynens.be/notes/touch-icons" target="_blank" rel="external">https://mathiasbynens.be/notes/touch-icons</a><]]>
+    <![CDATA[<h2 id="参考">参考</h2>
+<ol>
+<li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
+<li>viewport 数据]]>
     </summary>
-    
-      <category term="mobile" scheme="http://guirong.github.io/tags/mobile/"/>
     
   </entry>
   
@@ -37,8 +87,8 @@
     <title><![CDATA[跨终端实践-天猫试戴的解决方案]]></title>
     <link href="http://guirong.github.io/2014/10/crossend-tmalltry.html"/>
     <id>http://guirong.github.io/2014/10/crossend-tmalltry.html</id>
-    <published>2014-10-16T07:51:58.000Z</published>
-    <updated>2014-10-16T07:51:58.000Z</updated>
+    <published>2014-10-22T04:00:39.000Z</published>
+    <updated>2014-10-22T04:00:39.000Z</updated>
     <content type="html"><![CDATA[<p>请先扫码体验(天猫app体验最佳)：<a target="_blank" href="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png"><img src="http://gtms01.alicdn.com/tps/i1/TB1MuH0FVXXXXa_XFXXUvtM3pXX-540-548.png" style="width:20px;"></a></p>
 <p><img src="http://gtms03.alicdn.com/tps/i3/TB1gyk_FFXXXXaiapXXa6gN9XXX-660-990.jpg" style="max-width:660px;width:260px"></p>
 <p>体验完产品，具体讲下技术实现方案，整体的实现过程可以分为：</p>
@@ -116,6 +166,7 @@
 <li>支持更多品类：项链、眼镜、耳环、手镯、手表等其他类目</li>
 <li>可以考虑结合图像搜索做相关推荐</li>
 <li>尝试使用图像识别，减少已有模板对比的成本，<a href="http://mtschirs.github.io/js-objectdetect/examples/example_sunglasses_jquery.htm" target="_blank" rel="external">example</a></li>
+<li>牛逼的3d眼睛试戴:<a href="http://www.direct-optic.fr/essai-virtuel-lunettes-troisd/" target="_blank" rel="external">http://www.direct-optic.fr/essai-virtuel-lunettes-troisd/</a></li>
 </ol>
 <h3 id="附">附</h3>
 <ol>
@@ -134,6 +185,25 @@
       <category term="crossend" scheme="http://guirong.github.io/tags/crossend/"/>
     
       <category term="WebRTC" scheme="http://guirong.github.io/tags/WebRTC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[About Touch Icons]]></title>
+    <link href="http://guirong.github.io/2014/10/about-touch-icons.html"/>
+    <id>http://guirong.github.io/2014/10/about-touch-icons.html</id>
+    <published>2014-10-18T09:42:03.000Z</published>
+    <updated>2014-10-18T09:42:03.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li><a href="https://mathiasbynens.be/notes/touch-icons" target="_blank" rel="external">https://mathiasbynens.be/notes/touch-icons</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li><a href="https://mathiasbynens.be/notes/touch-icons" target="_blank" rel="external">https://mathiasbynens.be/notes/touch-icons</a><]]>
+    </summary>
+    
+      <category term="mobile" scheme="http://guirong.github.io/tags/mobile/"/>
     
   </entry>
   
