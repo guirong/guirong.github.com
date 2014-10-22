@@ -182,11 +182,11 @@ article .meta {
   text-align: right;
   font-size: 12px;
 }
-article ul {
+article ul > li {
   list-style: outside square;
   margin-left: 1em;
 }
-article ol {
+article ol > li {
   list-style: outside decimal;
   margin-left: 1em;
 }
