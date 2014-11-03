@@ -4,7 +4,7 @@
   <subtitle><![CDATA[guirong's personal site]]></subtitle>
   <link href="/feed.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-11-03T12:18:14.287Z</updated>
+  <updated>2014-11-03T12:19:19.112Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[About Head Html Tag]]></title>
+    <link href="http://guirong.github.io/2014/11/head.html"/>
+    <id>http://guirong.github.io/2014/11/head.html</id>
+    <published>2014-11-03T12:19:14.000Z</published>
+    <updated>2014-11-03T12:19:14.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li><a href="http://open.mb.qq.com/doc?id=1201" target="_blank" rel="external">http://open.mb.qq.com/doc?id=1201</a></li>
+<li><a href="http://fex.baidu.com/blog/2014/10/html-head-tags/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/10/html-head-tags/</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li><a href="http://open.mb.qq.com/doc?id=1201" target="_blank" rel="external">http://open.mb.qq.com/doc?id=1201</a></li>
+<li><a href="]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[智能生活-潮玩酷]]></title>
@@ -46,25 +65,6 @@
     <![CDATA[<ol>
 <li>数据线<ol>
 <li><a href="http://www.bluelounge.com/products/kii/" target="_blank" rel="external">http://www.bluelounge.com/products/kii]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[]]></title>
-    <link href="http://guirong.github.io/2014/10/head.html"/>
-    <id>http://guirong.github.io/2014/10/head.html</id>
-    <published>2014-10-24T08:10:46.000Z</published>
-    <updated>2014-10-24T08:10:46.000Z</updated>
-    <content type="html"><![CDATA[<ol>
-<li><a href="http://open.mb.qq.com/doc?id=1201" target="_blank" rel="external">http://open.mb.qq.com/doc?id=1201</a></li>
-<li><a href="http://fex.baidu.com/blog/2014/10/html-head-tags/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/10/html-head-tags/</a></li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<ol>
-<li><a href="http://open.mb.qq.com/doc?id=1201" target="_blank" rel="external">http://open.mb.qq.com/doc?id=1201</a></li>
-<li><a href="]]>
     </summary>
     
   </entry>
