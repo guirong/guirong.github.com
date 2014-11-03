@@ -4,7 +4,7 @@
   <subtitle><![CDATA[guirong's personal site]]></subtitle>
   <link href="/feed.xml" rel="self"/>
   <link href="http://guirong.github.io/"/>
-  <updated>2014-10-22T05:04:00.676Z</updated>
+  <updated>2014-11-03T12:18:14.287Z</updated>
   <id>http://guirong.github.io/</id>
   
   <author>
@@ -15,11 +15,110 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[智能生活-潮玩酷]]></title>
+    <link href="http://guirong.github.io/2014/11/tech-prds.html"/>
+    <id>http://guirong.github.io/2014/11/tech-prds.html</id>
+    <published>2014-11-03T12:17:47.000Z</published>
+    <updated>2014-11-03T12:17:47.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li>数据线<ol>
+<li><a href="http://www.bluelounge.com/products/kii/" target="_blank" rel="external">http://www.bluelounge.com/products/kii/</a></li>
+<li><a href="http://www.hellonomad.com/products/nomadkey" target="_blank" rel="external">http://www.hellonomad.com/products/nomadkey</a></li>
+<li><a href="http://popcord.co/" target="_blank" rel="external">http://popcord.co/</a></li>
+<li><a href="https://www.indiegogo.com/projects/incharge-the-smallest-keyring-cable" target="_blank" rel="external">https://www.indiegogo.com/projects/incharge-the-smallest-keyring-cable</a></li>
+</ol>
+</li>
+<li>追踪<ol>
+<li><a href="http://www.nutspace.com/" target="_blank" rel="external">http://www.nutspace.com/</a></li>
+</ol>
+</li>
+<li>闹钟<ol>
+<li><a href="http://hex3.co/products/aclock-bluetooth-alarm-clock" target="_blank" rel="external">http://hex3.co/products/aclock-bluetooth-alarm-clock</a></li>
+</ol>
+</li>
+<li>照明<ol>
+<li>mr.beams <a href="http://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.26.FRpus3&amp;id=38619321284&amp;skuId=47766009015&amp;areaId=330100&amp;cat_id=2&amp;abbucket=7&amp;rn=d2bf27eb661725dcd678fc318890484c&amp;user_id=828120332&amp;is_b=1" target="_blank" rel="external">http://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.26.FRpus3&amp;id=38619321284&amp;skuId=47766009015&amp;areaId=330100&amp;cat_id=2&amp;abbucket=7&amp;rn=d2bf27eb661725dcd678fc318890484c&amp;user_id=828120332&amp;is_b=1</a></li>
+</ol>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li>数据线<ol>
+<li><a href="http://www.bluelounge.com/products/kii/" target="_blank" rel="external">http://www.bluelounge.com/products/kii]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[]]></title>
+    <link href="http://guirong.github.io/2014/10/head.html"/>
+    <id>http://guirong.github.io/2014/10/head.html</id>
+    <published>2014-10-24T08:10:46.000Z</published>
+    <updated>2014-10-24T08:10:46.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li><a href="http://open.mb.qq.com/doc?id=1201" target="_blank" rel="external">http://open.mb.qq.com/doc?id=1201</a></li>
+<li><a href="http://fex.baidu.com/blog/2014/10/html-head-tags/" target="_blank" rel="external">http://fex.baidu.com/blog/2014/10/html-head-tags/</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li><a href="http://open.mb.qq.com/doc?id=1201" target="_blank" rel="external">http://open.mb.qq.com/doc?id=1201</a></li>
+<li><a href="]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[viewport need to know]]></title>
+    <link href="http://guirong.github.io/2014/10/viewport.html"/>
+    <id>http://guirong.github.io/2014/10/viewport.html</id>
+    <published>2014-10-23T05:19:37.000Z</published>
+    <updated>2014-10-23T05:19:37.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="visualviewport_vs_layoutviewport">visualviewport vs layoutviewport</h2>
+<ol>
+<li>layout ViewPort 用于布局，visual ViewPort 指可视窗口</li>
+<li>页面缩放:<ol>
+<li>layout ViewPort不变，但对应的物理像素变化了</li>
+<li>visual ViewPort内的可视像素变化了(window.innerWidth/Height可获取)</li>
+<li>layout ViewPort 超出 visual ViewPort 出现滚动条</li>
+</ol>
+</li>
+<li>layout ViewPort 可通过 meta标签指定</li>
+<li>devicePixelRatio?<a href="http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html" target="_blank" rel="external">http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html</a><ol>
+<li>pc/mobile 不同？ <a href="https://code.google.com/p/chromium/issues/detail?id=177836" target="_blank" rel="external">https://code.google.com/p/chromium/issues/detail?id=177836</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="参考">参考</h2>
+<ol>
+<li><a href="https://developer.apple.com/library/IOs/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html" target="_blank" rel="external">apple 关于viewport的文档</a></li>
+<li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
+<li>viewport 数据：<ol>
+<li><a href="http://screensiz.es" target="_blank" rel="external">http://screensiz.es</a></li>
+<li><a href="http://viewportsizes.com" target="_blank" rel="external">http://viewportsizes.com</a></li>
+<li><a href="http://mydevice.io/devices/" target="_blank" rel="external">http://mydevice.io/devices/</a></li>
+<li><a href="http://www.canbike.org/CSSpixels/" target="_blank" rel="external">http://www.canbike.org/CSSpixels/</a></li>
+<li><a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" target="_blank" rel="external">http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/</a></li>
+</ol>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="visualviewport_vs_layoutviewport">visualviewport vs layoutviewport</h2>
+<ol>
+<li>layout ViewPort 用于布局，visual ViewPort 指可视窗口</li>
+<li]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[fe references]]></title>
     <link href="http://guirong.github.io/2014/10/fe-references.html"/>
     <id>http://guirong.github.io/2014/10/fe-references.html</id>
-    <published>2014-10-22T04:50:38.000Z</published>
-    <updated>2014-10-22T04:50:38.000Z</updated>
+    <published>2014-10-22T08:29:58.000Z</published>
+    <updated>2014-10-22T08:29:58.000Z</updated>
     <content type="html"><![CDATA[<h2 id="兼容性">兼容性</h2>
 <ul>
 <li><a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a></li>
@@ -35,6 +134,7 @@
 <li>cordova &amp; phonegap</li>
 <li><a href="http://www.webapps-online.com/online-tools/user-agent-strings/dv/" target="_blank" rel="external">http://www.webapps-online.com/online-tools/user-agent-strings/dv/</a></li>
 <li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
+<li>moible设备使用数据：<a href="http://www.umindex.com/" target="_blank" rel="external">http://www.umindex.com/</a></li>
 </ul>
 <h2 id="tools">tools</h2>
 <ul>
@@ -52,27 +152,6 @@
       <category term="references" scheme="http://guirong.github.io/tags/references/"/>
     
       <category term="tools" scheme="http://guirong.github.io/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[viewport detail]]></title>
-    <link href="http://guirong.github.io/2014/10/viewport.html"/>
-    <id>http://guirong.github.io/2014/10/viewport.html</id>
-    <published>2014-10-22T04:07:20.000Z</published>
-    <updated>2014-10-22T04:07:20.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="参考">参考</h2>
-<ol>
-<li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
-<li>viewport 数据（有些老）：<a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" target="_blank" rel="external">http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/</a></li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="参考">参考</h2>
-<ol>
-<li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
-<li>viewport 数据]]>
-    </summary>
     
   </entry>
   

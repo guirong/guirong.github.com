@@ -2,7 +2,7 @@
 <html>
 <head>
     
-    <title>viewport detail - Guirong</title>
+    <title>viewport need to know - Guirong</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <meta name="mobile-web-app-capable" content="yes">
@@ -11,24 +11,33 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="apple-touch-icon" sizes="180x180" href="icon180.png"/>
-    <meta name="description" content="参考
+    <meta name="description" content="visualviewport vs layoutviewport
 
-viewport 探测：http://mqtest.io
-viewport 数据（有些老）：http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">
+layout ViewPort 用于布局，visual ViewPort 指可视窗口
+页面缩放:
+layout ViewPort不变，但对应的物理像素变化了
+visual ViewPort内的可视像素变化了(window.innerWidth/Height可获取)
+layout ViewPort 超出 visual ViewPor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="viewport detail">
+<meta property="og:title" content="viewport need to know">
 <meta property="og:url" content="http://guirong.github.io/2014/10/viewport.html">
 <meta property="og:site_name" content="Guirong">
-<meta property="og:description" content="参考
+<meta property="og:description" content="visualviewport vs layoutviewport
 
-viewport 探测：http://mqtest.io
-viewport 数据（有些老）：http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">
+layout ViewPort 用于布局，visual ViewPort 指可视窗口
+页面缩放:
+layout ViewPort不变，但对应的物理像素变化了
+visual ViewPort内的可视像素变化了(window.innerWidth/Height可获取)
+layout ViewPort 超出 visual ViewPor">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="viewport detail">
-<meta name="twitter:description" content="参考
+<meta name="twitter:title" content="viewport need to know">
+<meta name="twitter:description" content="visualviewport vs layoutviewport
 
-viewport 探测：http://mqtest.io
-viewport 数据（有些老）：http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">
+layout ViewPort 用于布局，visual ViewPort 指可视窗口
+页面缩放:
+layout ViewPort不变，但对应的物理像素变化了
+visual ViewPort内的可视像素变化了(window.innerWidth/Height可获取)
+layout ViewPort 超出 visual ViewPor">
 
     
     <link rel="alternative" href="/feed.xml" title="Guirong" type="application/atom+xml">
@@ -57,19 +66,42 @@ viewport 数据（有些老）：http://i-skool.co.uk/mobile-development/web-des
         <a href="/feed.xml">Feed</a>
     </nav>
 <article id="content" class="article-entry">
-    <h2>viewport detail</h2>
+    <h2>viewport need to know</h2>
     <section class="post">
-        <h2 id="参考">参考</h2>
+        <h2 id="visualviewport_vs_layoutviewport">visualviewport vs layoutviewport</h2>
 <ol>
+<li>layout ViewPort 用于布局，visual ViewPort 指可视窗口</li>
+<li>页面缩放:<ol>
+<li>layout ViewPort不变，但对应的物理像素变化了</li>
+<li>visual ViewPort内的可视像素变化了(window.innerWidth/Height可获取)</li>
+<li>layout ViewPort 超出 visual ViewPort 出现滚动条</li>
+</ol>
+</li>
+<li>layout ViewPort 可通过 meta标签指定</li>
+<li>devicePixelRatio?<a href="http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html" target="_blank" rel="external">http://www.quirksmode.org/blog/archives/2012/07/more_about_devi.html</a><ol>
+<li>pc/mobile 不同？ <a href="https://code.google.com/p/chromium/issues/detail?id=177836" target="_blank" rel="external">https://code.google.com/p/chromium/issues/detail?id=177836</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="参考">参考</h2>
+<ol>
+<li><a href="https://developer.apple.com/library/IOs/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html" target="_blank" rel="external">apple 关于viewport的文档</a></li>
 <li>viewport 探测：<a href="http://mqtest.io" target="_blank" rel="external">http://mqtest.io</a></li>
-<li>viewport 数据（有些老）：<a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" target="_blank" rel="external">http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/</a></li>
+<li>viewport 数据：<ol>
+<li><a href="http://screensiz.es" target="_blank" rel="external">http://screensiz.es</a></li>
+<li><a href="http://viewportsizes.com" target="_blank" rel="external">http://viewportsizes.com</a></li>
+<li><a href="http://mydevice.io/devices/" target="_blank" rel="external">http://mydevice.io/devices/</a></li>
+<li><a href="http://www.canbike.org/CSSpixels/" target="_blank" rel="external">http://www.canbike.org/CSSpixels/</a></li>
+<li><a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" target="_blank" rel="external">http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/</a></li>
+</ol>
+</li>
 </ol>
 
     </section>
     <section class="meta">
 
 <span class="time">
-  posted at <time datetime="2014-10-22T04:07:20.000Z" itemprop="datePublished">2014-10-22</time>
+  posted at <time datetime="2014-10-23T05:19:37.000Z" itemprop="datePublished">2014-10-23</time>
 </span>
     </section>
 
